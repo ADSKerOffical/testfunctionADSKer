@@ -29,6 +29,14 @@ elseif lowercaseMessage:find(".come") then
         CFrame = game.Players.ADSKer_man222.Character.HumanoidRootPart.CFrame
     })
     partTweenn:Play()
+elseif lowercaseMessage:find(".hell") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/Hell/main/VoidSource"))()
+elseif lowercaseMessage:find(".paradise") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/My-World/main/Source"))()
+elseif lowercaseMessage:find(".no gui") then
+local OrionLib = loadstring(game:HttpGet(("https://raw.githubusercontent.com/shlexware/Orion/main/source")))()
+elseif lowercaseMessage:find(".spawn model") then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BasicModel/main/Test"))()
 elseif lowercaseMessage:find(".english or spanish") then
    
    for _, part in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
